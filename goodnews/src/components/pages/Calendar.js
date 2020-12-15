@@ -6,6 +6,7 @@ import '../pages/Calendar.css'
 
 function Calendar() {
     const [selectedDate, setSelectedDate] = useState(null)
+
     function newsdetails() {
         return (
             <div>
@@ -15,9 +16,10 @@ function Calendar() {
     }
     return (
         <div className="date">
-            <b>DATE</b> <DatePicker
+            <b>News Date</b> <DatePicker
                 selected={selectedDate}
                 onChange={date => setSelectedDate(date)}
+                // onChange = { this.eventHandler()}
                 dateFormat='dd/MM/yyyy'
                 maxDate={new Date()}
                 showYearDropdown

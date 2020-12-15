@@ -19,10 +19,13 @@ const Details = () => {
     };
     return (
         <div>
+
             <div className="container py-4">
                 <Link className="btn btn-primary" to="/title">All News</Link>
 
                 <h1 className="display-4"></h1>
+
+                <b>{details.title}</b>
                 <hr />
                 <p>{details.description}</p>
                 <p>{details.date}</p>

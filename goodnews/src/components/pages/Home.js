@@ -17,10 +17,12 @@ const Title = () => {
         <div className="container">
             <div className="py-4"></div>
 
+
             <table class="table border shadow">
                 <thead>
                     <tr>
-                        <th scope="col">News</th>
+                        <th scope="col"><b>{news.title}</b></th>
+
                         <th scope="col"></th>
 
                         {/* <th scope="col">Action</th> */}
@@ -31,16 +33,14 @@ const Title = () => {
 
                         <tr>
 
-                            <td>{news.title}</td>
-                            <td>
-                                <Link class="btn btn-primary" to={`/details/${news.id}`}>Read</Link>
-                            </td>
+                            <td>{news.description}</td>
+
 
                         </tr>
                     }
                 </tbody>
             </table>
-            <Link className="nav-link" exact to="/title">More</Link>
+            <Link className="nav-link" exact to="/title">More News</Link>
 
         </div>
 
