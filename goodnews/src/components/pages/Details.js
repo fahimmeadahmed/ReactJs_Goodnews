@@ -3,7 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 const Details = () => {
     const [details, setDetails] = useState({
-        description: ""
+        description: "",
+        date: ""
     });
 
     const { id } = useParams();
@@ -17,12 +18,19 @@ const Details = () => {
         setDetails(res.data);
     };
     return (
-        <div className="container py-4">
-            <Link className="btn btn-primary" to="/title">back to Titles</Link>
-            <h1 className="display-4"></h1>
-            <hr />
-            <p>{details.description}</p>
-        </div>
+        <div>
+            <div className="container py-4">
+                <Link className="btn btn-primary" to="/title">All News</Link>
+
+                <h1 className="display-4"></h1>
+                <hr />
+                <p>{details.description}</p>
+                <p>{details.date}</p>
+            </div >
+            <div className="container py-4">
+                <Link className="btn btn-primary" to="/">Back to Home</Link>
+            </div>
+        </div >
 
     );
 };

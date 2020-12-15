@@ -7,10 +7,12 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Details from './components/pages/Details';
 import About from './components/pages/About';
 
+
 function App() {
   return (
     <Router>
       <div className="App">
+
         <Navbar />
 
         <Switch>

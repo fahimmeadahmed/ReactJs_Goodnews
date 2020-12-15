@@ -7,9 +7,6 @@ const Title = () => {
 
     useEffect(() => {
         loadNews();
-        // return () => {
-        //     cleanup
-        // }
     }, []);
 
     const loadNews = async () => {
@@ -19,27 +16,31 @@ const Title = () => {
     return (
         <div className="container">
             <div className="py-4"></div>
-            <h1>Title Page</h1>
+
             <table class="table border shadow">
                 <thead>
                     <tr>
-                        <th scope="col">Titles</th>
+                        <th scope="col">News</th>
+                        <th scope="col"></th>
 
-
+                        {/* <th scope="col">Action</th> */}
                     </tr>
                 </thead>
                 <tbody>
                     {
-                        news.map((record, index) => (
-                            <tr>
 
-                                <td>{record.title}</td>
-                            </tr>
+                        <tr>
 
+                            <td>{news.title}</td>
+                            <td>
+                                <Link class="btn btn-primary" to={`/details/${news.id}`}>Read</Link>
+                            </td>
 
-                        ))}
+                        </tr>
+                    }
                 </tbody>
             </table>
+            <Link className="nav-link" exact to="/title">More</Link>
 
         </div>
 

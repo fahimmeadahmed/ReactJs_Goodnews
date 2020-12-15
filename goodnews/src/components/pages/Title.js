@@ -19,24 +19,20 @@ const Title = () => {
     return (
         <div className="container">
             <div className="py-4"></div>
-            <h1>Title Page</h1>
+
             <table class="table border shadow">
                 <thead>
-                    <tr><th scope="col">No</th>
-                        <th scope="col">Titles</th>
-                        {/* <th scope="col"></th> */}
-                        <th scope="col">Action</th>
 
-                    </tr>
                 </thead>
                 <tbody>
                     {
                         news.map((record, index) => (
                             <tr>
-                                <th scope="row">{index + 1}</th>
+                                <th scope="row"></th>
                                 <td>{record.title}</td>
+                                <td>{record.date}</td>
                                 <td>
-                                    <Link class="btn btn-primary" to={`/details/${record.id}`}>View</Link>
+                                    <Link class="btn btn-primary" to={`/details/${record.id}`}>Details</Link>
                                 </td>
                             </tr>
 

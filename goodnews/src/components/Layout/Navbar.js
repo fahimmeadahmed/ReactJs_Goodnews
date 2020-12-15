@@ -1,12 +1,14 @@
 import React from "react";
 import { Router } from "react-router-dom";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import Calendar from "../pages/Calendar";
+
 const Navbar = () => {
     return (
 
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <div className="container"><div className="container-fluid">
-                <a className="navbar-brand" href="#">Good News Portal</a>
+                <a className="navbar-brand" href="/">Good News Portal</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -15,17 +17,22 @@ const Navbar = () => {
                         <li className="nav-item">
                             <NavLink className="nav-link" exact to="/">Home </NavLink>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <NavLink className="nav-link" exact to="/title">Title</NavLink>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <NavLink className="nav-link" exact to="/about">About</NavLink>
+
                         </li>
                     </ul>
+
                 </div>
             </div>
+                <Calendar></Calendar>
             </div>
+
         </nav>
+
 
     );
 };
