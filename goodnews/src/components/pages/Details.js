@@ -21,7 +21,7 @@ const Details = () => {
         <div>
 
             <div className="container py-4">
-                <Link className="btn btn-primary" to="/title">All News</Link>
+                <Link className="btn btn-primary" to="/title">Back</Link>
 
                 <h1 className="display-4"></h1>
 

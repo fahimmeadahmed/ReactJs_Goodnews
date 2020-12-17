@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import '../pages/Calendar.css'
 
 const Title = () => {
     const [news, setNews] = useState([]);
@@ -21,19 +22,17 @@ const Title = () => {
             <div className="py-4"></div>
 
             <table class="table border shadow">
-                <thead>
+                {/* <thead>
 
-                </thead>
+                </thead> */}
                 <tbody>
                     {
                         news.map((record, index) => (
                             <tr>
                                 <th scope="row"></th>
-                                <td>{record.title}</td>
+                                <td><Link className="link" to={`/details/${record.id}`}>{record.title}</Link></td>
                                 <td>{record.date}</td>
-                                <td>
-                                    <Link class="btn btn-primary" to={`/details/${record.id}`}>Details</Link>
-                                </td>
+
                             </tr>
 
                         )
