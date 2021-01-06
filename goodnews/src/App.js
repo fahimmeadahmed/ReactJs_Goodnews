@@ -11,6 +11,7 @@ import About from './components/pages/About';
 function App() {
   return (
     <Router>
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
       <div className="App">
 
         <Navbar />
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/title" component={Title} />
           <Route exact path="/details/:id" component={Details} />
+
         </Switch>
       </div>
     </Router>

@@ -1,6 +1,13 @@
 .date{
     align-items:right;
+    align-self: auto;
 }
 .link{
     text-decoration: none;
 }
+.margin{
+    margin-left: 12px;
+}
+.div_date{
+    margin: 20px 25px 7px 267px;
+}    

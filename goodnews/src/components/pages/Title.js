@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import '../pages/Calendar.css'
+import moment from 'moment'
 
 const Title = () => {
     const [news, setNews] = useState([]);
@@ -15,13 +16,16 @@ const Title = () => {
 
     const loadNews = async () => {
         const result = await axios.get("http://localhost:53780/api/NList")
+        // result.data.map(x => (
+        //     x.date = x.date.toLocaleDateString()
+        // ));
         setNews(result.data)
     }
     return (
         <div className="container">
             <div className="py-4"></div>
 
-            <table class="table border shadow">
+            <table className="table border shadow">
                 {/* <thead>
 
                 </thead> */}
@@ -31,7 +35,11 @@ const Title = () => {
                             <tr>
                                 <th scope="row"></th>
                                 <td><Link className="link" to={`/details/${record.id}`}>{record.title}</Link></td>
-                                <td>{record.date}</td>
+                                <td>
+                                </td>
+
+                                {/* <td>{moment(record.date).format('ll')}
+                                </td> */}
 
                             </tr>
 

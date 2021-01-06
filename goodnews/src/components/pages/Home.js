@@ -10,39 +10,41 @@ const Title = () => {
     }, []);
 
     const loadNews = async () => {
-        const result = await axios.get("http://localhost:53780/api/NList/1")
+        const result = await axios.get(`http://localhost:53780/api/NList/1`)
         setNews(result.data)
+        console.log(result.data);
     }
     return (
         <div className="container">
-            <div className="py-4"></div>
+            {/* <div className="py-4"></div>
+            {
 
-
-            <table class="table border shadow">
-                <thead>
-                    <tr>
-                        <th scope="col"><b>{news.title}</b></th>
-
-                        <th scope="col"></th>
-
-                        {/* <th scope="col">Action</th> */}
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-
+                <div>
+                    <table>
                         <tr>
 
-                            <td>{news.description}</td>
-
-
+                            <h5> {news.title}</h5>
                         </tr>
-                    }
-                </tbody>
-            </table>
-            <Link className="nav-link" exact to="/title">More News</Link>
+                        <tr>
 
-        </div>
+                            <td>
+                                {news.description}
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+
+
+
+
+            } */}
+            <br>
+            </br>
+            <Link className="btn btn-primary" exact to="/title">More News</Link>
+
+
+        </div >
 
     );
 };
